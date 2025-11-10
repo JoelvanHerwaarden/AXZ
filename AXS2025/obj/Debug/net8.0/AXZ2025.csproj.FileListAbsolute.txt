@@ -1,0 +1,12 @@
+C:\Users\JoëlvanHerwaarden\Documents\GitHub\AXS\AXS2025\bin\Debug\net8.0\AXS2025.deps.json
+C:\Users\JoëlvanHerwaarden\Documents\GitHub\AXS\AXS2025\bin\Debug\net8.0\AXS2025.dll
+C:\Users\JoëlvanHerwaarden\Documents\GitHub\AXS\AXS2025\bin\Debug\net8.0\AXS2025.pdb
+C:\Users\JoëlvanHerwaarden\Documents\GitHub\AXS\AXS2025\obj\Debug\net8.0\AXS2025.csproj.AssemblyReference.cache
+C:\Users\JoëlvanHerwaarden\Documents\GitHub\AXS\AXS2025\obj\Debug\net8.0\AXS2025.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JoëlvanHerwaarden\Documents\GitHub\AXS\AXS2025\obj\Debug\net8.0\AXS2025.AssemblyInfoInputs.cache
+C:\Users\JoëlvanHerwaarden\Documents\GitHub\AXS\AXS2025\obj\Debug\net8.0\AXS2025.AssemblyInfo.cs
+C:\Users\JoëlvanHerwaarden\Documents\GitHub\AXS\AXS2025\obj\Debug\net8.0\AXS2025.csproj.CoreCompileInputs.cache
+C:\Users\JoëlvanHerwaarden\Documents\GitHub\AXS\AXS2025\obj\Debug\net8.0\AXS2025.dll
+C:\Users\JoëlvanHerwaarden\Documents\GitHub\AXS\AXS2025\obj\Debug\net8.0\refint\AXS2025.dll
+C:\Users\JoëlvanHerwaarden\Documents\GitHub\AXS\AXS2025\obj\Debug\net8.0\AXS2025.pdb
+C:\Users\JoëlvanHerwaarden\Documents\GitHub\AXS\AXS2025\obj\Debug\net8.0\ref\AXS2025.dll

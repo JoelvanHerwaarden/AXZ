@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>639e4685-ac81-4476-8b9d-4109471dc1bd</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>AXS</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)CollectPhaseParameters.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\AssignPhaseCodesCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AXZApplication.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\CreatePhaseFiltersCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\CreateSharedParametersCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Debug.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UI\AXZRibbonButton.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\AXZThemeManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Resources\DarkModeCodebehind.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\GenericDropdownWindow.xaml.cs">
+      <DependentUpon>GenericDropdownWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UI\GenericInputWindow.xaml.cs">
+      <DependentUpon>GenericInputWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Resources\LightModeCodebehind.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\ViewPhaseWindow.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>ViewPhaseWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\DictionaryUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)Resources\DarkModeStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)UI\GenericDropdownWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)UI\GenericInputWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Resources\LightModeStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)UI\ViewPhaseWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources.resx">
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\AXZ_PhasingParameters.txt" />
+  </ItemGroup>
+</Project>
