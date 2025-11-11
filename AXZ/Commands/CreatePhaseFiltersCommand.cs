@@ -291,23 +291,22 @@ namespace AXZ.Commands
             }
             List<Category> cats = CollectPhaseParameters.GetPhaseParameterCategories(document);
             List<ElementId> allowedCategoryIds = cats.Select(cat => cat.Id).ToList();
-            FilterRule hasValueRule = ParameterFilterRuleFactory.CreateHasValueParameterRule(startPhase.Id);
-            ElementParameterFilter hasValueFilter = new ElementParameterFilter(hasValueRule);
 
-            FilterRule secondHasValueRule = ParameterFilterRuleFactory.CreateHasValueParameterRule(demoPhase.Id);
-            ElementParameterFilter secondHasValueFilter = new ElementParameterFilter(secondHasValueRule);
+            FilterRule hasStartValueRule = ParameterFilterRuleFactory.CreateHasValueParameterRule(demoPhase.Id);
+            ElementParameterFilter hasStartValueFilter = new ElementParameterFilter(hasStartValueRule);
 
-            FilterRule secondRule = ParameterFilterRuleFactory.CreateLessRule(demoPhase.Id, filterValue);
-            ElementParameterFilter secondFilter = new ElementParameterFilter(secondRule);
+            FilterRule startRule = ParameterFilterRuleFactory.CreateLessRule(demoPhase.Id, filterValue);
+            ElementParameterFilter startFilter = new ElementParameterFilter(startRule);
+            LogicalAndFilter startPhaseFilter = new LogicalAndFilter(hasStartValueFilter, startFilter);
 
-            FilterRule thirdRule = ParameterFilterRuleFactory.CreateGreaterRule(startPhase.Id, filterValue);
-            ElementParameterFilter thirdFilter = new ElementParameterFilter(thirdRule);
-            LogicalOrFilter OrFilter = new LogicalOrFilter(
-                new ElementParameterFilter(secondRule),
-                new ElementParameterFilter(thirdRule)
-            );
+            FilterRule hasDemoValueRule = ParameterFilterRuleFactory.CreateHasValueParameterRule(startPhase.Id);
+            ElementParameterFilter hasDemoValueFilter = new ElementParameterFilter(hasDemoValueRule);
 
-            LogicalAndFilter finalFilter = new LogicalAndFilter(new List<ElementFilter> { hasValueFilter, secondHasValueFilter, OrFilter} as IList<ElementFilter>);
+            FilterRule demoRule = ParameterFilterRuleFactory.CreateGreaterRule(startPhase.Id, filterValue);
+            ElementParameterFilter demoFilter = new ElementParameterFilter(demoRule);
+            LogicalAndFilter demoPhaseFilter = new LogicalAndFilter(hasDemoValueFilter, demoFilter);
+
+            LogicalOrFilter finalFilter = new LogicalOrFilter(startPhaseFilter, demoPhaseFilter);
 
             viewFilter = ParameterFilterElement.Create(
                 document,

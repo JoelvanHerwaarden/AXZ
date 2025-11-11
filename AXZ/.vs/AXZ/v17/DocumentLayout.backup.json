@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\GitHub\\AXZ\\AXZ\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|c:\\users\\jo\u00EBlvanherwaarden\\documents\\github\\axz\\axz\\commands\\assignphasecodescommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|solutionrelative:commands\\assignphasecodescommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|c:\\users\\jo\u00EBlvanherwaarden\\documents\\github\\axz\\axz\\commands\\createphasefilterscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|solutionrelative:commands\\createphasefilterscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|c:\\users\\jo\u00EBlvanherwaarden\\documents\\github\\axz\\axz\\commands\\assignphasecodescommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|solutionrelative:commands\\assignphasecodescommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|c:\\users\\jo\u00EBlvanherwaarden\\documents\\github\\axz\\axz\\commands\\createsharedparameterscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -77,19 +77,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AssignPhaseCodesCommand.cs",
               "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\GitHub\\AXZ\\AXZ\\Commands\\AssignPhaseCodesCommand.cs",
               "RelativeDocumentMoniker": "Commands\\AssignPhaseCodesCommand.cs",
               "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\GitHub\\AXZ\\AXZ\\Commands\\AssignPhaseCodesCommand.cs",
               "RelativeToolTip": "Commands\\AssignPhaseCodesCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-10T14:03:47.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Resources.resx",
+              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\GitHub\\AXZ\\AXZ\\Resources.resx",
+              "RelativeDocumentMoniker": "Resources.resx",
+              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\GitHub\\AXZ\\AXZ\\Resources.resx",
+              "RelativeToolTip": "Resources.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-11-10T10:58:57.583Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CreatePhaseFiltersCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\GitHub\\AXZ\\AXZ\\Commands\\CreatePhaseFiltersCommand.cs",
+              "RelativeDocumentMoniker": "Commands\\CreatePhaseFiltersCommand.cs",
+              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\GitHub\\AXZ\\AXZ\\Commands\\CreatePhaseFiltersCommand.cs*",
+              "RelativeToolTip": "Commands\\CreatePhaseFiltersCommand.cs*",
+              "ViewState": "AgIAABsBAAAAAAAAAAAswC0BAABrAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T10:44:31.918Z",
               "EditorCaption": ""
             },
             {
@@ -106,17 +130,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Resources.resx",
-              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\GitHub\\AXZ\\AXZ\\Resources.resx",
-              "RelativeDocumentMoniker": "Resources.resx",
-              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\GitHub\\AXZ\\AXZ\\Resources.resx",
-              "RelativeToolTip": "Resources.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-11-10T10:58:57.583Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 8,
               "Title": "DarkModeStyles.xaml",
               "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\GitHub\\AXZ\\AXZ\\Resources\\DarkModeStyles.xaml",
@@ -125,18 +138,6 @@
               "RelativeToolTip": "Resources\\DarkModeStyles.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-11-10T10:49:17.283Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CreatePhaseFiltersCommand.cs",
-              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\GitHub\\AXZ\\AXZ\\Commands\\CreatePhaseFiltersCommand.cs",
-              "RelativeDocumentMoniker": "Commands\\CreatePhaseFiltersCommand.cs",
-              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\GitHub\\AXZ\\AXZ\\Commands\\CreatePhaseFiltersCommand.cs",
-              "RelativeToolTip": "Commands\\CreatePhaseFiltersCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T10:44:31.918Z"
             },
             {
               "$type": "Document",
