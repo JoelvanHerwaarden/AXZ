@@ -8,6 +8,7 @@ using System.Linq;
 using System.Reflection;
 using AXZ.Models;
 using AXZ2025;
+using DB = Autodesk.Revit.DB;
 
 namespace AXZ.Commands
 {
@@ -44,6 +45,7 @@ namespace AXZ.Commands
 
             if (sharedParamFile == null)
             {
+                Debug.Log("Shared parameter file not found or invalid.");
                 Autodesk.Revit.UI.TaskDialog.Show("Error", "Shared parameter file not found or invalid.");
                 return Result.Failed;
             }
@@ -59,7 +61,9 @@ namespace AXZ.Commands
                     Definition definition = FindDefinition(sharedParamFile, paramName);
                     if (definition == null)
                     {
-                        resultMsg += string.Format("Parameter definition for '{0}' not found in the shared parameter file.\n", paramName);
+                        string defMsg = string.Format("Parameter definition for '{0}' not found in the shared parameter file.\n", paramName);
+                        Debug.Log(defMsg);
+                        resultMsg += defMsg;
                      }
 
                     CategorySet catSet = CreateCategorySet(doc, categories);
@@ -67,11 +71,15 @@ namespace AXZ.Commands
 
                     if (doc.ParameterBindings.Insert(definition, binding, GroupTypeId.Phasing))
                     {
-                        resultMsg += string.Format("Parameter '{0}' created successfully.\n", paramName);
+                        string msg = string.Format("Parameter '{0}' created successfully.\n", paramName);
+                        Debug.Log(msg);
+                        resultMsg += msg;
                     }
                     else
                     {
-                        resultMsg += string.Format("Parameter '{0}' already exists or failed to create.\n", paramName);
+                        string msg  = string.Format("Parameter '{0}' already exists or failed to create.\n", paramName); 
+                        Debug.Log(msg);
+                        resultMsg += msg;
                     }
                 }
 
@@ -84,16 +92,22 @@ namespace AXZ.Commands
 
                     if (doc.ParameterBindings.Insert(viewParameterDefinition, viewBinding, GroupTypeId.Phasing))
                     {
-                        resultMsg += string.Format("Parameter '{0}' created successfully.\n", viewParameterName);
+                        string msg = string.Format("Parameter '{0}' created successfully.\n", viewParameterName);
+                        Debug.Log(msg);
+                        resultMsg += msg;
                     }
                     else
                     {
-                        resultMsg += string.Format("Parameter '{0}' already exists or failed to create.\n", viewParameterName);
+                        string msg = string.Format("Parameter '{0}' already exists or failed to create.\n", viewParameterName);
+                        Debug.Log(msg);
+                        resultMsg += msg;
                     }
                 }
                 else
                 {
-                    resultMsg += string.Format("Parameter definition for '{0}' not found in the shared parameter file.\n", viewParameterName);
+                    string msg = string.Format("Parameter definition for '{0}' not found in the shared parameter file.\n", viewParameterName); 
+                    Debug.Log(msg);
+                    resultMsg += msg;
                 }
 
 
@@ -103,6 +117,8 @@ namespace AXZ.Commands
             Autodesk.Revit.UI.TaskDialog.Show("Create Shared Parameters Phasing", resultMsg);
             
             System.IO.File.Delete(sharedParamFilePath);
+
+            CollectPhaseParameters.RepairPhasingParameterBindings(doc);
             return Result.Succeeded;
         }
 
@@ -123,6 +139,35 @@ namespace AXZ.Commands
                 if (cat != null) set.Insert(cat);
             }
             return set;
+        }
+    }
+
+    [Transaction(TransactionMode.Manual)]
+    [Regeneration(RegenerationOption.Manual)]
+    public class RepairSharedParametersCommand : IExternalCommand
+    {
+        public Result Execute(
+            ExternalCommandData commandData,
+            ref string message,
+            ElementSet elements)
+        {
+            Document doc = commandData.Application.ActiveUIDocument.Document;
+
+            CollectPhaseParameters.RepairPhasingParameterBindings(doc);
+            List<ParameterElement> parameters = new List<ParameterElement>()
+            {
+                CollectPhaseParameters.GetSP_PhaseCreated1(commandData.Application.ActiveUIDocument.Document),
+                CollectPhaseParameters.GetSP_PhaseCreated2(commandData.Application.ActiveUIDocument.Document),
+                CollectPhaseParameters.GetSP_PhaseCreated3(commandData.Application.ActiveUIDocument.Document),
+                CollectPhaseParameters.GetSharedParameterByName(commandData.Application.ActiveUIDocument.Document, "SP_PhaseCreated[L]"),
+                CollectPhaseParameters.GetSP_PhaseDemolished1(commandData.Application.ActiveUIDocument.Document),
+                CollectPhaseParameters.GetSP_PhaseDemolished2(commandData.Application.ActiveUIDocument.Document),
+                CollectPhaseParameters.GetSP_PhaseDemolished3(commandData.Application.ActiveUIDocument.Document),
+                CollectPhaseParameters.GetSharedParameterByName(commandData.Application.ActiveUIDocument.Document, "SP_PhaseDemolished[L]"),
+                CollectPhaseParameters.GetSharedParameterByName(commandData.Application.ActiveUIDocument.Document, "SP_ViewPhase")
+            };
+            Utils.Show(CollectPhaseParameters.DebugCheckBindingsForParameters(parameters));
+            return Result.Succeeded;
         }
     }
 }

@@ -1,14 +1,16 @@
 ﻿using Autodesk.Revit.Attributes;
 using Autodesk.Revit.DB;
-using DB = Autodesk.Revit.DB;
 using Autodesk.Revit.DB.Events;
 using Autodesk.Revit.UI;
 using Autodesk.Revit.UI.Selection;
+using AXZ.Models;
 using AXZ.UI;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using AXZ.Models;
+using System.Windows.Controls;
+using DB = Autodesk.Revit.DB;
+using AS = Autodesk.Revit.ApplicationServices;
 
 namespace AXZ.Commands
 {
@@ -20,6 +22,8 @@ namespace AXZ.Commands
         {
             UIDocument uIDocument = commandData.Application.ActiveUIDocument;
             Document document = commandData.Application.ActiveUIDocument.Document;
+
+            CollectPhaseParameters.RepairPhasingParameterBindings(document);
             Selection selection = uIDocument.Selection;
 
             string viewPhaseCode = document.ActiveView.LookupParameter("SP_ViewPhase").AsString();
@@ -76,13 +80,22 @@ namespace AXZ.Commands
                 string tempInPhaseFilterName = string.Format("{0}_{1}_Temporary In Current Phase", filterNamePrefix, phase);  
                 string notVisFilterName = string.Format("{0}_{1}_NotVisible", filterNamePrefix, phase);
 
+                Debug.Log($"Creating filters: {newFilterName}, {demoFilterName}, {tempFilterName}, {notVisFilterName}");
                 SharedParameterElement startPhase = CollectPhaseParameters.GetSharedParameterByName(document, selectPhaseLevelParameter);
+                Debug.Log($"Retrieved start phase parameter: {startPhase.Name}");
                 SharedParameterElement demoPhase = CollectPhaseParameters.GetSharedParameterByName(document, demolishPhaseLevelParameter);
+                Debug.Log($"Retrieved demolish phase parameter: {demoPhase.Name}"); 
                 ParameterFilterElement filterElementNew = FilterUtils.CreateNewFilter(startPhase, phase, newFilterName);
+                Debug.Log("New filter created successfully.");
                 ParameterFilterElement filterElementDemo = FilterUtils.CreateDemolishedFilter(demoPhase, phase, demoFilterName);
+                Debug.Log("Demolished filter created successfully.");
                 ParameterFilterElement filterElementTempInPhase = FilterUtils.CreateTempInPhaseFilter(startPhase, demoPhase, phase, tempInPhaseFilterName);
+                Debug.Log("Temporary In Phase filter created successfully.");
                 ParameterFilterElement filterElementTemp = FilterUtils.CreateTempFilter(startPhase, demoPhase, phase, tempFilterName);
+                Debug.Log("Temporary filter created successfully.");
                 ParameterFilterElement filterElementNotVis = FilterUtils.CreateNotVisibleFilter(startPhase, demoPhase, phase, notVisFilterName);
+                Debug.Log("Not Visible filter created successfully.");
+                Debug.Log("Filters created successfully.");
                 filterNames.Add(filterElementNew.Name);
                 filterNames.Add(filterElementDemo.Name);
                 filterNames.Add(filterElementTemp.Name);
@@ -166,7 +179,8 @@ namespace AXZ.Commands
             {
                 return viewFilter;
             }
-            List<Category> cats = CollectPhaseParameters.GetPhaseParameterCategories(document);
+            //List<Category> cats = CollectPhaseParameters.GetPhaseParameterCategories(document);
+            List<Category> cats = CollectPhaseParameters.GetFilterableCategoriesForParameter(startPhase);
             List<ElementId> allowedCategoryIds = cats.Select(cat => cat.Id).ToList();                                  
             FilterRule hasValueRule = ParameterFilterRuleFactory.CreateHasValueParameterRule(startPhase.Id);
             FilterRule secondRule = ParameterFilterRuleFactory.CreateEqualsRule(startPhase.Id, filterValue);

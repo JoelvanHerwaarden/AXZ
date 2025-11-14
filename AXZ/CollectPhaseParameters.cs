@@ -1,4 +1,6 @@
 ﻿using Autodesk.Revit.DB;
+using DB = Autodesk.Revit.DB; 
+using Autodesk.Revit.UI;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -61,6 +63,92 @@ namespace AXZ.Models
             }
             
             return categories;
+
+
+        }
+
+        public static bool HasParameterBinding(ParameterElement parameter)
+        {
+            Document document = parameter.Document;
+            BindingMap bindings = document.ParameterBindings;
+            Autodesk.Revit.DB.Binding binding = bindings.get_Item(parameter.GetDefinition());
+
+            if (binding != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public static void RepairPhasingParameterBindings(Document doc)
+        {
+
+            string sharedParamFilePath = CollectPhaseParameters.CreateSharedParameterFilePath();
+            List<ParameterElement> parameters = new List<ParameterElement>()
+            {
+                CollectPhaseParameters.GetSP_PhaseCreated1(doc),
+                CollectPhaseParameters.GetSP_PhaseCreated2(doc),
+                CollectPhaseParameters.GetSP_PhaseCreated3(doc),
+                CollectPhaseParameters.GetSharedParameterByName(doc, "SP_PhaseCreated[L]"),
+                CollectPhaseParameters.GetSP_PhaseDemolished1(doc),
+                CollectPhaseParameters.GetSP_PhaseDemolished2(doc),
+                CollectPhaseParameters.GetSP_PhaseDemolished3(doc),
+                CollectPhaseParameters.GetSharedParameterByName(doc, "SP_PhaseDemolished[L]"),
+                CollectPhaseParameters.GetSharedParameterByName(doc, "SP_ViewPhase")
+            };
+
+            BindingMap map = doc.ParameterBindings;
+            using (Transaction transaction = new Transaction(doc, "Repair Existing Phase Parameters"))
+            {
+                transaction.Start();
+                foreach (ParameterElement param in parameters)
+                {
+                    if (!CollectPhaseParameters.HasParameterBinding(param))
+                    {
+                        DefinitionBindingMapIterator it = map.ForwardIterator();
+                        it.Reset();
+                        while (it.MoveNext())
+                        {
+                            Definition def = it.Key;
+                            if (def.Name == param.Name)
+                            {
+                                DB.Binding binding = (DB.Binding)it.Current;
+                                map.Remove(def);
+                                map.Insert(param.GetDefinition(), binding, GroupTypeId.Phasing);
+
+                            }
+                        }
+                    }
+                }
+                transaction.Commit();
+            }
+        }
+        public static string DebugCheckBindingsForParameters(List<ParameterElement> parameters)
+        {
+            string result = "";
+            List<Category> categories = new List<Category>();
+            Document document = parameters[0].Document;
+            BindingMap bindings = document.ParameterBindings;
+
+            foreach (ParameterElement parameter in parameters)
+            {
+                Autodesk.Revit.DB.Binding binding = bindings.get_Item(parameter.GetDefinition()); 
+                if (binding != null)
+                {
+                    string bindingType = binding.GetType().Name;
+                    result += $"Parameter {parameter.Name} has a {bindingType} binding.\n";
+                }
+                else
+                {
+                    result+= $"Parameter {parameter.Name} has no binding.\n";
+                }
+            }
+            
+
+            return result;
 
 
         }

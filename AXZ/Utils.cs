@@ -27,6 +27,16 @@ namespace AXZ
             Window RevitWindow = hwndSource.RootVisual as Window;
             return RevitWindow;
         }
+        public static void Show(string message)
+        {
+            Autodesk.Revit.UI.TaskDialog taskDialog = new Autodesk.Revit.UI.TaskDialog("Revit")
+            {
+                ExpandedContent = message,
+                MainContent = message,
+                MainIcon = Autodesk.Revit.UI.TaskDialogIcon.TaskDialogIconInformation
+            };
+            Autodesk.Revit.UI.TaskDialog.Show("Revit", message);
+        }
         /// <summary>
         /// Shows an information balloon in the Revit InfoCenter with the specified message.
         /// </summary>
