@@ -8,8 +8,8 @@
     mc:Ignorable="d"
     MinWidth="500"
     Height="430"
-    MinHeight="430"
-    MaxHeight="430"
+    MinHeight="535"
+    MaxHeight="535"
     Width="500"
     WindowStartupLocation="CenterOwner"
     Title=""
@@ -31,6 +31,8 @@
             <RowDefinition Height="45" />
             <RowDefinition Height="60" />
 
+            <RowDefinition Height="45" />
+            <RowDefinition Height="60" />
             <RowDefinition Height="45" />
             <RowDefinition Height="60" />
             <RowDefinition Height="55" />
@@ -91,10 +93,30 @@
                   Grid.Row="5"
                   Margin="10"/>
 
-        <Button x:Name="SubmitButton" 
+        <Label VerticalAlignment="Top"
+            Content="Select Phase filter"
+            FontSize="16" 
+            VerticalContentAlignment="Center"
+            Margin="10,10,10,0" 
+            Grid.Row="6"
+            Foreground="{DynamicResource FontColor}" />
+
+        <Border Style="{DynamicResource BackgroundBorder}" 
+            Grid.Row="7"
+            Margin="10,10,10,10">
+            <ComboBox 
+                Style="{DynamicResource DarkComboBox}"
+                x:Name="PhaseFilterList"
+                Background="Transparent"
+                BorderThickness="0"
+                FontSize="16"
+                Foreground="{DynamicResource FontColor}"
+                Margin="15,5,15,5"/>
+        </Border>
+            <Button x:Name="SubmitButton" 
                 HorizontalAlignment="Right"
                 Width="100"
-                Grid.Row="7" 
+                Grid.Row="8" 
                 Style="{DynamicResource RoundButton}" 
                 Content="Submit" 
                 Click="SubmitButton_Click"

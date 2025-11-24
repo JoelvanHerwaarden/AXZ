@@ -26,10 +26,9 @@ namespace AXZ.Commands
             CollectPhaseParameters.RepairPhasingParameterBindings(document);
             Selection selection = uIDocument.Selection;
 
-            string viewPhaseCode = document.ActiveView.LookupParameter("SP_ViewPhase").AsString();
-            string phase = viewPhaseCode;
+            string phase = document.ActiveView.LookupParameter("SP_ViewPhase").AsString();
 
-            ViewPhaseWindow window = new ViewPhaseWindow("Create Phase Filters", phase, Utils.RevitWindow(commandData));
+            ViewPhaseWindow window = new ViewPhaseWindow("Create Phase Filters", document, Utils.RevitWindow(commandData));
             window.ShowDialog();
             if(window.Cancelled)
             {
@@ -182,7 +181,7 @@ namespace AXZ.Commands
             //List<Category> cats = CollectPhaseParameters.GetPhaseParameterCategories(document);
             List<Category> cats = CollectPhaseParameters.GetFilterableCategoriesForParameter(startPhase);
             List<ElementId> allowedCategoryIds = cats.Select(cat => cat.Id).ToList();                                  
-            FilterRule hasValueRule = ParameterFilterRuleFactory.CreateHasValueParameterRule(startPhase.Id);
+            FilterRule hasValueRule = ParameterFilterRuleFactory.CreateNotEqualsRule(startPhase.Id, "");
             FilterRule secondRule = ParameterFilterRuleFactory.CreateEqualsRule(startPhase.Id, filterValue);
             
             LogicalAndFilter filter = new LogicalAndFilter(new List<ElementFilter>
@@ -212,7 +211,7 @@ namespace AXZ.Commands
             }
             List<Category> cats = CollectPhaseParameters.GetPhaseParameterCategories(document);
             List<ElementId> allowedCategoryIds = cats.Select(cat => cat.Id).ToList();
-            FilterRule hasValueRule = ParameterFilterRuleFactory.CreateHasValueParameterRule(demoPhase.Id);
+            FilterRule hasValueRule = ParameterFilterRuleFactory.CreateNotEqualsRule(demoPhase.Id, "");
             FilterRule secondRule = ParameterFilterRuleFactory.CreateEqualsRule(demoPhase.Id, filterValue);
 
             LogicalAndFilter filter = new LogicalAndFilter(new List<ElementFilter>
@@ -270,13 +269,13 @@ namespace AXZ.Commands
             }
             List<Category> cats = CollectPhaseParameters.GetPhaseParameterCategories(document);
             List<ElementId> allowedCategoryIds = cats.Select(cat => cat.Id).ToList();
-            FilterRule hasValueRule = ParameterFilterRuleFactory.CreateHasValueParameterRule(startPhase.Id);
+            FilterRule hasValueRule = ParameterFilterRuleFactory.CreateNotEqualsRule(startPhase.Id, "");
             ElementParameterFilter hasValueFilter = new ElementParameterFilter(hasValueRule);
 
             FilterRule secondRule = ParameterFilterRuleFactory.CreateLessRule(startPhase.Id, filterValue);
             ElementParameterFilter secondFilter = new ElementParameterFilter(secondRule);
 
-            FilterRule secondHasValueRule = ParameterFilterRuleFactory.CreateHasValueParameterRule(demoPhase.Id);
+            FilterRule secondHasValueRule = ParameterFilterRuleFactory.CreateNotEqualsRule(demoPhase.Id, "");
             ElementParameterFilter secondHasValueFilter = new ElementParameterFilter(secondHasValueRule);
 
             FilterRule thirdRule = ParameterFilterRuleFactory.CreateGreaterRule(demoPhase.Id, filterValue);
@@ -306,14 +305,14 @@ namespace AXZ.Commands
             List<Category> cats = CollectPhaseParameters.GetPhaseParameterCategories(document);
             List<ElementId> allowedCategoryIds = cats.Select(cat => cat.Id).ToList();
 
-            FilterRule hasStartValueRule = ParameterFilterRuleFactory.CreateHasValueParameterRule(demoPhase.Id);
+            FilterRule hasStartValueRule = ParameterFilterRuleFactory.CreateNotEqualsRule(demoPhase.Id, "");
             ElementParameterFilter hasStartValueFilter = new ElementParameterFilter(hasStartValueRule);
 
             FilterRule startRule = ParameterFilterRuleFactory.CreateLessRule(demoPhase.Id, filterValue);
             ElementParameterFilter startFilter = new ElementParameterFilter(startRule);
             LogicalAndFilter startPhaseFilter = new LogicalAndFilter(hasStartValueFilter, startFilter);
 
-            FilterRule hasDemoValueRule = ParameterFilterRuleFactory.CreateHasValueParameterRule(startPhase.Id);
+            FilterRule hasDemoValueRule = ParameterFilterRuleFactory.CreateNotEqualsRule(startPhase.Id, "");
             ElementParameterFilter hasDemoValueFilter = new ElementParameterFilter(hasDemoValueRule);
 
             FilterRule demoRule = ParameterFilterRuleFactory.CreateGreaterRule(startPhase.Id, filterValue);

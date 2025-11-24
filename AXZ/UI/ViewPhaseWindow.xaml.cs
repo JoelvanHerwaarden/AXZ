@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Autodesk.Revit.DB;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,21 +22,32 @@ namespace AXZ.UI
         public string Phase { get; private set; }
         public string SelectedPhaseLevel { get; private set; }
         public bool AddToView { get; private set; }
+        private Dictionary<string, PhaseFilter> PhaseFilters { get; set; }
         public ViewPhaseWindow(string windowTitle,
-            string phase,
+            Document document,
             Window owner)
         {
             InitializeComponent();
-            this.Phase = phase;
+            this.Phase = document.ActiveView.LookupParameter("SP_ViewPhase").AsString();
             this.AddToView = false;
             this.Title = windowTitle;
             this.Owner = owner;
-            this.PhaseTextBox.Text = phase;
+            this.PhaseTextBox.Text = this.Phase;
             Cancelled = true;
             PhaseLevelListbox.Items.Add("Phase 1");
             PhaseLevelListbox.Items.Add("Phase 2");
             PhaseLevelListbox.Items.Add("Phase 3");
             PhaseLevelListbox.Items.Add("Phase Combined");
+
+            PhaseFilters = new Dictionary<string, PhaseFilter>();
+            foreach(PhaseFilter pf in new FilteredElementCollector(document)
+                .OfClass(typeof(PhaseFilter))
+                .Cast<PhaseFilter>())
+            {
+                this.PhaseFilterList.Items.Add(pf.Name);  
+                PhaseFilters.Add(pf.Name, pf);
+            }
+
         }
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
