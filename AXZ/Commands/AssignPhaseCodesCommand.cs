@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace AXZ
+namespace AXZ.Commands
 {
     public class PhaseParametersUpdater : IUpdater
     {

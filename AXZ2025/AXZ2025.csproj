@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<TargetFramework>net8.0-windows10.0.22621.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<!--This References System.Windows.Forms to the project-->
+	<UseWindowsForms>true</UseWindowsForms>
+	<!--This References Presentation.Core to the project for WPF purposes-->
+	<UseWPF>true</UseWPF>
+	<!--This makes it possible to build code with [unsafe] keywords-->
+	<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+
+	  <!--This tells the Class Library that is should get it's Assmbly info (Version, Creator etc.) from the GlobalAssemblyInfo.cs in the Shared Project-->
+	  <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	<!--This creates a 2025 Build configuration-->
+	<Configurations>2025</Configurations>
+	<!--This tells the Class Library that is should get it's Assmbly info (Version, Creator etc.) from the GlobalAssemblyInfo.cs in the Shared Project-->
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	<AssemblyName>AXZ</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+    <PackageReference Include="Revit_All_Main_Versions_API_x64" Version="2026.0.0" />
+
+	<FrameworkReference Include="Microsoft.WindowsDesktop.App" />
+	<FrameworkReference Include="Microsoft.WindowsDesktop.App.WPF" />
+	<FrameworkReference Include="Microsoft.WindowsDesktop.App.WindowsForms" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <Import Project="..\AXZ\AXZ.projitems" Label="Shared" />
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy /Y &quot;$(TargetPath)&quot; &quot;$(SolutionDir)EZInstaller\Resources\$(AssemblyName)$(ConfigurationName).dll&quot;&#xD;&#xA;echo &quot;$(SolutionDir)EZInstaller\Resources\$(AssemblyName)$(ConfigurationName).dll&quot;&#xD;&#xA;&#xD;&#xA;" />
+  </Target>
+
+</Project>

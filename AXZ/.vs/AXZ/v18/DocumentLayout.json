@@ -3,44 +3,101 @@
   "WorkspaceRootPath": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|c:\\users\\jo\u00EBlvanherwaarden\\documents\\github\\axz\\axz\\commands\\createphasefilterscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|solutionrelative:commands\\createphasefilterscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|c:\\users\\jo\u00EBlvanherwaarden\\documents\\github\\axz\\axz\\commands\\createsharedparameterscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|solutionrelative:commands\\createsharedparameterscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61E8A5B1-B96C-4B1D-AFE5-6A79E9A4D1F8}|..\\AXS2025\\AXZ2025.csproj|c:\\users\\jo\u00EBlvanherwaarden\\documents\\github\\axz\\axz\\ui\\viewphasewindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{61E8A5B1-B96C-4B1D-AFE5-6A79E9A4D1F8}|..\\AXS2025\\AXZ2025.csproj|solutionrelative:ui\\viewphasewindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|c:\\users\\jo\u00EBlvanherwaarden\\documents\\github\\axz\\axz\\ui\\viewphasewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|solutionrelative:ui\\viewphasewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|c:\\users\\jo\u00EBlvanherwaarden\\documents\\github\\axz\\axz\\commands\\analysecommands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|solutionrelative:commands\\analysecommands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|c:\\users\\jo\u00EBlvanherwaarden\\documents\\github\\axz\\axz\\collectphaseparameters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|solutionrelative:collectphaseparameters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{61E8A5B1-B96C-4B1D-AFE5-6A79E9A4D1F8}|..\\AXS2025\\AXZ2025.csproj|c:\\users\\jo\u00EBlvanherwaarden\\documents\\github\\axz\\axz\\utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61E8A5B1-B96C-4B1D-AFE5-6A79E9A4D1F8}|..\\AXS2025\\AXZ2025.csproj|solutionrelative:utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61E8A5B1-B96C-4B1D-AFE5-6A79E9A4D1F8}|..\\AXS2025\\AXZ2025.csproj|c:\\users\\jo\u00EBlvanherwaarden\\documents\\github\\axz\\axz\\debug.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61E8A5B1-B96C-4B1D-AFE5-6A79E9A4D1F8}|..\\AXS2025\\AXZ2025.csproj|solutionrelative:debug.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|c:\\users\\jo\u00EBlvanherwaarden\\documents\\github\\axz\\axz\\commands\\createsharedparameterscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|solutionrelative:commands\\createsharedparameterscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|c:\\users\\jo\u00EBlvanherwaarden\\documents\\github\\axz\\axz\\commands\\assignphasecodescommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|solutionrelative:commands\\assignphasecodescommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|c:\\users\\jo\u00EBlvanherwaarden\\documents\\github\\axz\\axz\\ui\\genericinputwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|solutionrelative:ui\\genericinputwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|c:\\users\\jo\u00EBlvanherwaarden\\documents\\github\\axz\\axz\\commands\\purgeunusedphasefilterscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|solutionrelative:commands\\purgeunusedphasefilterscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1851F447-2981-F809-83CE-B3CDDFF0272C}|..\\AXZ2025\\AXZ2025.csproj|c:\\users\\jo\u00EBlvanherwaarden\\documents\\github\\axz\\axz\\commands\\createphasefilterscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1851F447-2981-F809-83CE-B3CDDFF0272C}|..\\AXZ2025\\AXZ2025.csproj|solutionrelative:commands\\createphasefilterscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1851F447-2981-F809-83CE-B3CDDFF0272C}|..\\AXZ2025\\AXZ2025.csproj|c:\\users\\jo\u00EBlvanherwaarden\\documents\\github\\axz\\axz2025\\axz2025.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|c:\\users\\jo\u00EBlvanherwaarden\\documents\\github\\axz\\axz\\axzapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|solutionrelative:axzapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|EZInstaller||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1851F447-2981-F809-83CE-B3CDDFF0272C}|..\\AXZ2025\\AXZ2025.csproj|c:\\users\\jo\u00EBlvanherwaarden\\documents\\github\\axz\\axz2025\\axz2025.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|c:\\users\\jo\u00EBlvanherwaarden\\documents\\github\\axz\\axz\\globalassemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|solutionrelative:globalassemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|c:\\users\\jo\u00EBlvanherwaarden\\documents\\github\\axz\\axz\\utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|solutionrelative:utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|c:\\users\\jo\u00EBlvanherwaarden\\documents\\github\\axz\\axz\\debug.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|solutionrelative:debug.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|c:\\users\\jo\u00EBlvanherwaarden\\documents\\github\\axz\\axz\\ui\\viewphasewindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|solutionrelative:ui\\viewphasewindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|c:\\users\\jo\u00EBlvanherwaarden\\documents\\github\\axz\\axz\\ui\\viewphasewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|solutionrelative:ui\\viewphasewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF5F66F1-FF7F-426A-90D7-356D7A4190D5}|EZInstaller\\EZInstaller.csproj|C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\ezinstaller\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{FF5F66F1-FF7F-426A-90D7-356D7A4190D5}|EZInstaller\\EZInstaller.csproj|solutionrelative:ezinstaller\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF5F66F1-FF7F-426A-90D7-356D7A4190D5}|EZInstaller\\EZInstaller.csproj|C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\ezinstaller\\ezinstallerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF5F66F1-FF7F-426A-90D7-356D7A4190D5}|EZInstaller\\EZInstaller.csproj|solutionrelative:ezinstaller\\ezinstallerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF5F66F1-FF7F-426A-90D7-356D7A4190D5}|EZInstaller\\EZInstaller.csproj|C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\ezinstaller\\ezinstallerwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF5F66F1-FF7F-426A-90D7-356D7A4190D5}|EZInstaller\\EZInstaller.csproj|solutionrelative:ezinstaller\\ezinstallerwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF5F66F1-FF7F-426A-90D7-356D7A4190D5}|EZInstaller\\EZInstaller.csproj|C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\ezinstaller\\ezinstallerwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FF5F66F1-FF7F-426A-90D7-356D7A4190D5}|EZInstaller\\EZInstaller.csproj|solutionrelative:ezinstaller\\ezinstallerwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF5F66F1-FF7F-426A-90D7-356D7A4190D5}|EZInstaller\\EZInstaller.csproj|C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\ezinstaller\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FF5F66F1-FF7F-426A-90D7-356D7A4190D5}|EZInstaller\\EZInstaller.csproj|solutionrelative:ezinstaller\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF5F66F1-FF7F-426A-90D7-356D7A4190D5}|EZInstaller\\EZInstaller.csproj|C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\ezinstaller\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF5F66F1-FF7F-426A-90D7-356D7A4190D5}|EZInstaller\\EZInstaller.csproj|solutionrelative:ezinstaller\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|c:\\users\\jo\u00EBlvanherwaarden\\documents\\github\\axz\\axz\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
       "RelativeMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|solutionrelative:resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|c:\\users\\jo\u00EBlvanherwaarden\\documents\\github\\axz\\axz\\resources.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|solutionrelative:resources.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|c:\\users\\jo\u00EBlvanherwaarden\\documents\\github\\axz\\axz\\axz.addin||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|solutionrelative:axz.addin||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|c:\\users\\jo\u00EBlvanherwaarden\\documents\\github\\axz\\axz\\ui\\genericinputwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|solutionrelative:ui\\genericinputwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{639E4685-AC81-4476-8B9D-4109471DC1BD}|AXZ.shproj|c:\\users\\jo\u00EBlvanherwaarden\\documents\\github\\axz\\axz\\resources\\darkmodestyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -76,6 +133,9 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\GitHub\\AXS\\AXS\\AXSApplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\jo\u00EBlvanherwaarden\\documents\\github\\axz\\ezinstaller\\installationconfiguration.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -94,139 +154,186 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CreatePhaseFiltersCommand.cs",
-              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\Commands\\CreatePhaseFiltersCommand.cs",
-              "RelativeDocumentMoniker": "Commands\\CreatePhaseFiltersCommand.cs",
-              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\Commands\\CreatePhaseFiltersCommand.cs",
-              "RelativeToolTip": "Commands\\CreatePhaseFiltersCommand.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAA4wGIBAAAAAAAAAAAAAA==",
+              "Title": "AnalyseCommands.cs",
+              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\Commands\\AnalyseCommands.cs",
+              "RelativeDocumentMoniker": "Commands\\AnalyseCommands.cs",
+              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\Commands\\AnalyseCommands.cs",
+              "RelativeToolTip": "Commands\\AnalyseCommands.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T10:44:31.918Z",
+              "WhenOpened": "2025-12-02T09:25:15.125Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ViewPhaseWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\UI\\ViewPhaseWindow.xaml",
-              "RelativeDocumentMoniker": "UI\\ViewPhaseWindow.xaml",
-              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\UI\\ViewPhaseWindow.xaml",
-              "RelativeToolTip": "UI\\ViewPhaseWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-10T10:42:59.153Z",
-              "EditorCaption": ""
+              "DocumentIndex": 6,
+              "Title": "AXZ2025.csproj",
+              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ2025\\AXZ2025.csproj",
+              "RelativeDocumentMoniker": "..\\AXZ2025\\AXZ2025.csproj",
+              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ2025\\AXZ2025.csproj",
+              "RelativeToolTip": "..\\AXZ2025\\AXZ2025.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-01T16:51:18.828Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ViewPhaseWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\UI\\ViewPhaseWindow.xaml.cs",
-              "RelativeDocumentMoniker": "UI\\ViewPhaseWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\UI\\ViewPhaseWindow.xaml.cs",
-              "RelativeToolTip": "UI\\ViewPhaseWindow.xaml.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAADwvzIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T10:43:26.57Z",
-              "EditorCaption": ""
+              "DocumentIndex": 8,
+              "Title": "EZInstaller",
+              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\EZInstaller\\EZInstaller.csproj",
+              "RelativeDocumentMoniker": "EZInstaller\\EZInstaller.csproj",
+              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\EZInstaller\\EZInstaller.csproj",
+              "RelativeToolTip": "EZInstaller\\EZInstaller.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-11-24T10:01:45.71Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "CollectPhaseParameters.cs",
               "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\CollectPhaseParameters.cs",
               "RelativeDocumentMoniker": "CollectPhaseParameters.cs",
               "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\CollectPhaseParameters.cs",
               "RelativeToolTip": "CollectPhaseParameters.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAAwFUAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T14:01:58.527Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Resources.resx",
-              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\Resources.resx",
-              "RelativeDocumentMoniker": "Resources.resx",
-              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\Resources.resx",
-              "RelativeToolTip": "Resources.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-11-10T10:58:57.583Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Debug.cs",
-              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\Debug.cs",
-              "RelativeDocumentMoniker": "Debug.cs",
-              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\Debug.cs",
-              "RelativeToolTip": "Debug.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T09:32:51.609Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "DarkModeStyles.xaml",
-              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\Resources\\DarkModeStyles.xaml",
-              "RelativeDocumentMoniker": "Resources\\DarkModeStyles.xaml",
-              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\Resources\\DarkModeStyles.xaml",
-              "RelativeToolTip": "Resources\\DarkModeStyles.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-10T10:49:17.283Z",
+              "WhenOpened": "2025-11-10T14:01:58.527Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "AssignPhaseCodesCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\Commands\\AssignPhaseCodesCommand.cs",
+              "RelativeDocumentMoniker": "Commands\\AssignPhaseCodesCommand.cs",
+              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\Commands\\AssignPhaseCodesCommand.cs",
+              "RelativeToolTip": "Commands\\AssignPhaseCodesCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T14:03:47.36Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AXZ2025",
+              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ2025\\AXZ2025.csproj",
+              "RelativeDocumentMoniker": "..\\AXZ2025\\AXZ2025.csproj",
+              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ2025\\AXZ2025.csproj",
+              "RelativeToolTip": "..\\AXZ2025\\AXZ2025.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-24T10:02:54.653Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GlobalAssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\GlobalAssemblyInfo.cs",
+              "RelativeDocumentMoniker": "GlobalAssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\GlobalAssemblyInfo.cs",
+              "RelativeToolTip": "GlobalAssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T16:56:41.419Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "CreateSharedParametersCommand.cs",
               "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\Commands\\CreateSharedParametersCommand.cs",
               "RelativeDocumentMoniker": "Commands\\CreateSharedParametersCommand.cs",
               "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\Commands\\CreateSharedParametersCommand.cs",
               "RelativeToolTip": "Commands\\CreateSharedParametersCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAABlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-10T10:44:31.04Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "GenericInputWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\UI\\GenericInputWindow.xaml.cs",
-              "RelativeDocumentMoniker": "UI\\GenericInputWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\UI\\GenericInputWindow.xaml.cs",
-              "RelativeToolTip": "UI\\GenericInputWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "CreatePhaseFiltersCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\Commands\\CreatePhaseFiltersCommand.cs",
+              "RelativeDocumentMoniker": "Commands\\CreatePhaseFiltersCommand.cs",
+              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\Commands\\CreatePhaseFiltersCommand.cs",
+              "RelativeToolTip": "Commands\\CreatePhaseFiltersCommand.cs",
+              "ViewState": "AgIAANQAAAAAAAAAAAAowHkBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T10:43:06.489Z"
+              "WhenOpened": "2025-11-10T10:44:31.918Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "GenericInputWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\UI\\GenericInputWindow.xaml",
-              "RelativeDocumentMoniker": "UI\\GenericInputWindow.xaml",
-              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\UI\\GenericInputWindow.xaml",
-              "RelativeToolTip": "UI\\GenericInputWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-10T10:43:04.372Z"
+              "DocumentIndex": 4,
+              "Title": "PurgeUnusedPhaseFiltersCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\Commands\\PurgeUnusedPhaseFiltersCommand.cs",
+              "RelativeDocumentMoniker": "Commands\\PurgeUnusedPhaseFiltersCommand.cs",
+              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\Commands\\PurgeUnusedPhaseFiltersCommand.cs",
+              "RelativeToolTip": "Commands\\PurgeUnusedPhaseFiltersCommand.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCwAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T11:59:37.556Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "AssignPhaseCodesCommand.cs",
-              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\Commands\\AssignPhaseCodesCommand.cs",
-              "RelativeDocumentMoniker": "Commands\\AssignPhaseCodesCommand.cs",
-              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\Commands\\AssignPhaseCodesCommand.cs",
-              "RelativeToolTip": "Commands\\AssignPhaseCodesCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA1AAAAAAAAAA==",
+              "Title": "AXZApplication.cs",
+              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\AXZApplication.cs",
+              "RelativeDocumentMoniker": "AXZApplication.cs",
+              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\AXZApplication.cs",
+              "RelativeToolTip": "AXZApplication.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBoAAABsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T14:03:47.36Z"
+              "WhenOpened": "2025-11-24T08:09:42.786Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
+              "Title": "Debug.cs",
+              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\Debug.cs",
+              "RelativeDocumentMoniker": "Debug.cs",
+              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\Debug.cs",
+              "RelativeToolTip": "Debug.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T09:32:51.609Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\EZInstaller\\App.xaml.cs",
+              "RelativeDocumentMoniker": "EZInstaller\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\EZInstaller\\App.xaml.cs",
+              "RelativeToolTip": "EZInstaller\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T10:10:33.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "EZInstallerWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\EZInstaller\\EZInstallerWindow.xaml.cs",
+              "RelativeDocumentMoniker": "EZInstaller\\EZInstallerWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\EZInstaller\\EZInstallerWindow.xaml.cs",
+              "RelativeToolTip": "EZInstaller\\EZInstallerWindow.xaml.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABsAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T10:10:16.25Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ViewPhaseWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\UI\\ViewPhaseWindow.xaml",
+              "RelativeDocumentMoniker": "UI\\ViewPhaseWindow.xaml",
+              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\UI\\ViewPhaseWindow.xaml",
+              "RelativeToolTip": "UI\\ViewPhaseWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-10T10:42:59.153Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Utils.cs",
               "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\Utils.cs",
               "RelativeDocumentMoniker": "Utils.cs",
@@ -238,7 +345,145 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
+              "Title": "EZInstallerWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\EZInstaller\\EZInstallerWindow.xaml",
+              "RelativeDocumentMoniker": "EZInstaller\\EZInstallerWindow.xaml",
+              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\EZInstaller\\EZInstallerWindow.xaml",
+              "RelativeToolTip": "EZInstaller\\EZInstallerWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-24T10:10:01.367Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ViewPhaseWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\UI\\ViewPhaseWindow.xaml.cs",
+              "RelativeDocumentMoniker": "UI\\ViewPhaseWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\UI\\ViewPhaseWindow.xaml.cs",
+              "RelativeToolTip": "UI\\ViewPhaseWindow.xaml.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAIA4wCUAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T10:43:26.57Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "AXZ.addin",
+              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\AXZ.addin",
+              "RelativeDocumentMoniker": "AXZ.addin",
+              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\AXZ.addin",
+              "RelativeToolTip": "AXZ.addin",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000072|",
+              "WhenOpened": "2025-11-24T09:52:26.83Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Resources.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\Resources.Designer.cs",
+              "RelativeDocumentMoniker": "Resources.Designer.cs",
+              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\Resources.Designer.cs",
+              "RelativeToolTip": "Resources.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T09:56:33.469Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "InstallationConfiguration.txt",
+              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\EZInstaller\\InstallationConfiguration.txt",
+              "RelativeDocumentMoniker": "EZInstaller\\InstallationConfiguration.txt",
+              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\EZInstaller\\InstallationConfiguration.txt",
+              "RelativeToolTip": "EZInstaller\\InstallationConfiguration.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-11-24T09:58:39.574Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Resources.resx",
+              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\EZInstaller\\Resources.resx",
+              "RelativeDocumentMoniker": "EZInstaller\\Resources.resx",
+              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\EZInstaller\\Resources.resx",
+              "RelativeToolTip": "EZInstaller\\Resources.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-11-24T10:07:13.537Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\EZInstaller\\App.xaml",
+              "RelativeDocumentMoniker": "EZInstaller\\App.xaml",
+              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\EZInstaller\\App.xaml",
+              "RelativeToolTip": "EZInstaller\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-24T10:12:40.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "EZInstallerViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\EZInstaller\\EZInstallerViewModel.cs",
+              "RelativeDocumentMoniker": "EZInstaller\\EZInstallerViewModel.cs",
+              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\EZInstaller\\EZInstallerViewModel.cs",
+              "RelativeToolTip": "EZInstaller\\EZInstallerViewModel.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAADwvzMAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T10:12:33.89Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Resources.resx",
+              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\Resources.resx",
+              "RelativeDocumentMoniker": "Resources.resx",
+              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\Resources.resx",
+              "RelativeToolTip": "Resources.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-11-10T10:58:57.583Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "DarkModeStyles.xaml",
+              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\Resources\\DarkModeStyles.xaml",
+              "RelativeDocumentMoniker": "Resources\\DarkModeStyles.xaml",
+              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\Resources\\DarkModeStyles.xaml",
+              "RelativeToolTip": "Resources\\DarkModeStyles.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-10T10:49:17.283Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "GenericInputWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\UI\\GenericInputWindow.xaml.cs",
+              "RelativeDocumentMoniker": "UI\\GenericInputWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\UI\\GenericInputWindow.xaml.cs",
+              "RelativeToolTip": "UI\\GenericInputWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T10:43:06.489Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "GenericInputWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\UI\\GenericInputWindow.xaml",
+              "RelativeDocumentMoniker": "UI\\GenericInputWindow.xaml",
+              "ToolTip": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXZ\\AXZ\\UI\\GenericInputWindow.xaml",
+              "RelativeToolTip": "UI\\GenericInputWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-10T10:43:04.372Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
               "Title": "AXZ2025.csproj",
               "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXS\\AXS2025\\AXZ2025.csproj",
               "RelativeDocumentMoniker": "..\\..\\AXS\\AXS2025\\AXZ2025.csproj",
@@ -249,7 +494,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 27,
               "Title": "AXZ2025.csproj",
               "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXS\\AXS2025\\AXZ2025.csproj",
               "RelativeDocumentMoniker": "..\\..\\AXS\\AXS2025\\AXZ2025.csproj",
@@ -260,7 +505,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 28,
               "Title": "Microsoft.NET.Sdk.FrameworkReferenceResolution.targets",
               "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\9.0.306\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.Sdk.FrameworkReferenceResolution.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\9.0.306\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.Sdk.FrameworkReferenceResolution.targets",
@@ -272,7 +517,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 29,
               "Title": "VSProjectConfigWarningLog_db9c05d5-d70c-4fe9-88cf-f728036d01a9.txt",
               "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\AppData\\Local\\Temp\\VSProjectConfigWarningLog_db9c05d5-d70c-4fe9-88cf-f728036d01a9.txt",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\VSProjectConfigWarningLog_db9c05d5-d70c-4fe9-88cf-f728036d01a9.txt",
@@ -283,7 +528,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 33,
               "Title": "AXSRibbonButton.cs",
               "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXS\\AXS\\UI\\AXSRibbonButton.cs",
               "RelativeDocumentMoniker": "..\\..\\AXS\\AXS\\UI\\AXSRibbonButton.cs",
@@ -294,7 +539,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 34,
               "Title": "AXSThemeManager.cs",
               "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXS\\AXS\\UI\\AXSThemeManager.cs",
               "RelativeDocumentMoniker": "..\\..\\AXS\\AXS\\UI\\AXSThemeManager.cs",
@@ -305,7 +550,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 35,
               "Title": "AXSApplication.cs",
               "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\Documents\\Github\\AXS\\AXS\\AXSApplication.cs",
               "RelativeDocumentMoniker": "..\\..\\AXS\\AXS\\AXSApplication.cs",
@@ -316,7 +561,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 30,
               "Title": "Microsoft.Common.CurrentVersion.targets",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
@@ -328,7 +573,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 31,
               "Title": "ReadMe.txt",
               "DocumentMoniker": "C:\\Users\\Jo\u00EBlvanHerwaarden\\.nuget\\packages\\revit_all_main_versions_api_x64\\2026.0.0\\ReadMe.txt",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\.nuget\\packages\\revit_all_main_versions_api_x64\\2026.0.0\\ReadMe.txt",

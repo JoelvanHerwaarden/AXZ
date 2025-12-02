@@ -58,44 +58,53 @@ namespace AXZ.Commands
 
                 foreach (string paramName in parameterNames)
                 {
-                    Definition definition = FindDefinition(sharedParamFile, paramName);
+                    Definition definition = CollectPhaseParameters.FindDefinition(sharedParamFile, paramName);
+                    
                     if (definition == null)
                     {
                         string defMsg = string.Format("Parameter definition for '{0}' not found in the shared parameter file.\n", paramName);
                         Debug.Log(defMsg);
                         resultMsg += defMsg;
-                     }
-
-                    CategorySet catSet = CreateCategorySet(doc, categories);
-                    InstanceBinding binding = app.Create.NewInstanceBinding(catSet);
-
-                    if (doc.ParameterBindings.Insert(definition, binding, GroupTypeId.Phasing))
-                    {
-                        string msg = string.Format("Parameter '{0}' created successfully.\n", paramName);
-                        Debug.Log(msg);
-                        resultMsg += msg;
                     }
+                    if (!CollectPhaseParameters.DoesParameterExists(doc, paramName, definition as ExternalDefinition))
+                    {
+                        CategorySet catSet = CollectPhaseParameters.CreateCategorySet(doc, categories);
+                        InstanceBinding binding = app.Create.NewInstanceBinding(catSet);
+
+                        if (doc.ParameterBindings.Insert(definition, binding, GroupTypeId.Phasing))
+                        {
+                            string msg = string.Format("Parameter '{0}' created successfully.\n", paramName);
+                            Debug.Log(msg);
+                            resultMsg += msg;
+                        }
+                    }
+
                     else
                     {
-                        string msg  = string.Format("Parameter '{0}' already exists or failed to create.\n", paramName); 
+                        string msg = string.Format("Parameter '{0}' already exists or failed to create.\n", paramName);
                         Debug.Log(msg);
                         resultMsg += msg;
                     }
+
                 }
 
-                Definition viewParameterDefinition = FindDefinition(sharedParamFile, viewParameterName);
+                Definition viewParameterDefinition = CollectPhaseParameters.FindDefinition(sharedParamFile, viewParameterName);
                 if (viewParameterDefinition != null)
                 {
-                    CategorySet ViewCatSet = new CategorySet();
-                    ViewCatSet.Insert(doc.Settings.Categories.get_Item(BuiltInCategory.OST_Views));
-                    InstanceBinding viewBinding = app.Create.NewInstanceBinding(ViewCatSet);
-
-                    if (doc.ParameterBindings.Insert(viewParameterDefinition, viewBinding, GroupTypeId.Phasing))
+                    if(!CollectPhaseParameters.DoesParameterExists(doc, viewParameterName, viewParameterDefinition as ExternalDefinition))
                     {
-                        string msg = string.Format("Parameter '{0}' created successfully.\n", viewParameterName);
-                        Debug.Log(msg);
-                        resultMsg += msg;
+                        CategorySet ViewCatSet = new CategorySet();
+                        ViewCatSet.Insert(doc.Settings.Categories.get_Item(BuiltInCategory.OST_Views));
+                        InstanceBinding viewBinding = app.Create.NewInstanceBinding(ViewCatSet);
+
+                        if (doc.ParameterBindings.Insert(viewParameterDefinition, viewBinding, GroupTypeId.Phasing))
+                        {
+                            string msg = string.Format("Parameter '{0}' created successfully.\n", viewParameterName);
+                            Debug.Log(msg);
+                            resultMsg += msg;
+                        }
                     }
+                    
                     else
                     {
                         string msg = string.Format("Parameter '{0}' already exists or failed to create.\n", viewParameterName);
@@ -113,33 +122,21 @@ namespace AXZ.Commands
 
                 tx.Commit();
             }
+            if(resultMsg != "")
+            {
+                Autodesk.Revit.UI.TaskDialog.Show("Create Shared Parameters Phasing", resultMsg);
+            }
+            else
+            {
+                Utils.Show("All shared parameters for phasing already exist.");
+            }
 
-            Autodesk.Revit.UI.TaskDialog.Show("Create Shared Parameters Phasing", resultMsg);
-            
             System.IO.File.Delete(sharedParamFilePath);
 
             CollectPhaseParameters.RepairPhasingParameterBindings(doc);
             return Result.Succeeded;
         }
-
-        private static Definition FindDefinition(DefinitionFile file, string paramName)
-        {
-            return file.Groups
-                       .Cast<DefinitionGroup>()
-                       .Select(g => g.Definitions.get_Item(paramName))
-                       .FirstOrDefault(def => def != null);
-        }
-
-        private static CategorySet CreateCategorySet(Document doc, IEnumerable<BuiltInCategory> categories)
-        {
-            CategorySet set = new();
-            foreach (var bic in categories)
-            {
-                Category cat = doc.Settings.Categories.get_Item(bic);
-                if (cat != null) set.Insert(cat);
-            }
-            return set;
-        }
+        
     }
 
     [Transaction(TransactionMode.Manual)]

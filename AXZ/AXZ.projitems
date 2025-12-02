@@ -6,15 +6,18 @@
     <SharedGUID>639e4685-ac81-4476-8b9d-4109471dc1bd</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>AXS</Import_RootNamespace>
+    <Import_RootNamespace>AXZ</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)CollectPhaseParameters.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\AnalyseCommands.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\AssignPhaseCodesCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AXZApplication.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\PurgeUnusedPhaseFiltersCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\CreatePhaseFiltersCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\CreateSharedParametersCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Debug.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GlobalAssemblyInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Resources.Designer.cs">
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
@@ -66,5 +69,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\AXZ_PhasingParameters.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)AXZ.addin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>

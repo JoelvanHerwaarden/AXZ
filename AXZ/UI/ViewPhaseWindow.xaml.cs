@@ -21,6 +21,7 @@ namespace AXZ.UI
         public bool Cancelled { get; set; }
         public string Phase { get; private set; }
         public string SelectedPhaseLevel { get; private set; }
+        public PhaseFilter SelectedPhaseFilter { get; private set; }
         public bool AddToView { get; private set; }
         private Dictionary<string, PhaseFilter> PhaseFilters { get; set; }
         public ViewPhaseWindow(string windowTitle,
@@ -51,9 +52,27 @@ namespace AXZ.UI
         }
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Cancelled = false;
+            if (PhaseLevelListbox.SelectedItem == null)
+            {
+                Utils.Show("Please select a Phase Filter Level.");
+                return;
+            }
             this.SelectedPhaseLevel = PhaseLevelListbox.SelectedItem.ToString();
+            this.Cancelled = false;
             this.AddToView = this.AddToViewCheckbox.IsChecked.Value;
+            if(this.PhaseFilterList.SelectedItem != null)
+            {
+                string selectedPhaseFilterName = this.PhaseFilterList.SelectedItem.ToString();
+                if (selectedPhaseFilterName != null | selectedPhaseFilterName != "")
+                {
+                    this.SelectedPhaseFilter = PhaseFilters[selectedPhaseFilterName];
+                }
+                else
+                {
+                    this.SelectedPhaseFilter = null;
+                };
+            }
+            
             this.Close();
         }
     }

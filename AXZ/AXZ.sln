@@ -1,19 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.36616.10
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11217.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "AXZ", "AXZ.shproj", "{639E4685-AC81-4476-8B9D-4109471DC1BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AXZ2025", "..\AXS2025\AXZ2025.csproj", "{61E8A5B1-B96C-4B1D-AFE5-6A79E9A4D1F8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AXZ2025", "..\AXZ2025\AXZ2025.csproj", "{1851F447-2981-F809-83CE-B3CDDFF0272C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EZInstaller", "EZInstaller\EZInstaller.csproj", "{FF5F66F1-FF7F-426A-90D7-356D7A4190D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		2025|Any CPU = 2025|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{61E8A5B1-B96C-4B1D-AFE5-6A79E9A4D1F8}.2025|Any CPU.ActiveCfg = 2025|Any CPU
-		{61E8A5B1-B96C-4B1D-AFE5-6A79E9A4D1F8}.2025|Any CPU.Build.0 = 2025|Any CPU
+		{1851F447-2981-F809-83CE-B3CDDFF0272C}.2025|Any CPU.ActiveCfg = 2025|Any CPU
+		{1851F447-2981-F809-83CE-B3CDDFF0272C}.2025|Any CPU.Build.0 = 2025|Any CPU
+		{FF5F66F1-FF7F-426A-90D7-356D7A4190D5}.2025|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF5F66F1-FF7F-426A-90D7-356D7A4190D5}.2025|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -22,7 +26,7 @@ Global
 		SolutionGuid = {AA0C26F0-C2BA-4768-BB5D-85D811B032D8}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		AXZ.projitems*{61e8a5b1-b96c-4b1d-afe5-6a79e9a4d1f8}*SharedItemsImports = 5
+		AXZ.projitems*{1851f447-2981-f809-83ce-b3cddff0272c}*SharedItemsImports = 5
 		AXZ.projitems*{639e4685-ac81-4476-8b9d-4109471dc1bd}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal

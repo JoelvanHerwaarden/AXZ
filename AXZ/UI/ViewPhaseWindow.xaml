@@ -99,9 +99,12 @@
             VerticalContentAlignment="Center"
             Margin="10,10,10,0" 
             Grid.Row="6"
+               Visibility="Hidden"
             Foreground="{DynamicResource FontColor}" />
 
         <Border Style="{DynamicResource BackgroundBorder}" 
+                
+               Visibility="Hidden"
             Grid.Row="7"
             Margin="10,10,10,10">
             <ComboBox 

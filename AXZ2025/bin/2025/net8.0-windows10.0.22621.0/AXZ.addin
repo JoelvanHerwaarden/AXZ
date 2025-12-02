@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+	<AddIn Type="Application">
+		<Name>AXZ</Name>
+		<Assembly>AXZ.dll</Assembly>
+		<AddInId>e045c9bf-b155-4cb7-902a-adbe8db34d45</AddInId>
+		<FullClassName>AXZ.AXZApplication</FullClassName>
+		<VendorId>J van Herwaarden</VendorId>
+		<VendorDescription>A Revit addin for Phasing</VendorDescription>
+	</AddIn>
+</RevitAddIns>

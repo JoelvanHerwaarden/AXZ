@@ -22,11 +22,23 @@ namespace AXZ.Commands
         {
             UIDocument uIDocument = commandData.Application.ActiveUIDocument;
             Document document = commandData.Application.ActiveUIDocument.Document;
+            Document doc = commandData.Application.ActiveUIDocument.Document;
 
             CollectPhaseParameters.RepairPhasingParameterBindings(document);
             Selection selection = uIDocument.Selection;
-
-            string phase = document.ActiveView.LookupParameter("SP_ViewPhase").AsString();
+            Parameter viewPhaseParameter = document.ActiveView.LookupParameter("SP_ViewPhase");
+            if(viewPhaseParameter == null)
+            {
+                Utils.Show("The active view does not have the 'SP_ViewPhase' parameter.");
+                return Result.Failed;
+            }
+            string code = viewPhaseParameter.AsValueString();
+            if (code == string.Empty | code == null)
+            {
+                Utils.Show("The 'SP_ViewPhase' parameter in the active view is empty. Please set it before creating filters.\n\nMake sure to seperate the phases using dashes: For Example 100-100-200");
+                return Result.Failed;
+            }
+            string phase = viewPhaseParameter.AsString();
 
             ViewPhaseWindow window = new ViewPhaseWindow("Create Phase Filters", document, Utils.RevitWindow(commandData));
             window.ShowDialog();
@@ -107,6 +119,13 @@ namespace AXZ.Commands
                     {
                         activeView = (Autodesk.Revit.DB.View)document.GetElement(activeView.ViewTemplateId);
                     }
+
+                    //Remove Old Filters
+                    foreach(ElementId id in FilterUtils.GetAlreadyAppliedFilters(activeView))
+                    {
+                        activeView.RemoveFilter(id);
+                    }
+
                     ElementId solidFillPattern = new FilteredElementCollector(document)
                         .OfClass(typeof(FillPatternElement))
                         .Where(FillPatternElement => FillPatternElement.Name.Equals("<Solid fill>"))
@@ -165,7 +184,7 @@ namespace AXZ.Commands
             return Result.Succeeded;
         }
     }
-    public class  FilterUtils
+    public class FilterUtils
     {
         public static ParameterFilterElement CreateNewFilter(SharedParameterElement startPhase, string filterValue, string filterName)
         {
@@ -178,12 +197,13 @@ namespace AXZ.Commands
             {
                 return viewFilter;
             }
-            //List<Category> cats = CollectPhaseParameters.GetPhaseParameterCategories(document);
-            List<Category> cats = CollectPhaseParameters.GetFilterableCategoriesForParameter(startPhase);
-            List<ElementId> allowedCategoryIds = cats.Select(cat => cat.Id).ToList();                                  
+            List<Category> cats = CollectPhaseParameters.GetPhaseParameterCategories(document);
+            //List<Category> cats = CollectPhaseParameters.GetFilterableCategoriesForParameter(startPhase);
+
+            List<ElementId> allowedCategoryIds = cats.Select(cat => cat.Id).ToList();
             FilterRule hasValueRule = ParameterFilterRuleFactory.CreateNotEqualsRule(startPhase.Id, "");
             FilterRule secondRule = ParameterFilterRuleFactory.CreateEqualsRule(startPhase.Id, filterValue);
-            
+
             LogicalAndFilter filter = new LogicalAndFilter(new List<ElementFilter>
             {
                 new ElementParameterFilter(hasValueRule),
@@ -209,7 +229,10 @@ namespace AXZ.Commands
             {
                 return viewFilter;
             }
+
             List<Category> cats = CollectPhaseParameters.GetPhaseParameterCategories(document);
+            //List<Category> cats = CollectPhaseParameters.GetFilterableCategoriesForParameter(demoPhase);
+
             List<ElementId> allowedCategoryIds = cats.Select(cat => cat.Id).ToList();
             FilterRule hasValueRule = ParameterFilterRuleFactory.CreateNotEqualsRule(demoPhase.Id, "");
             FilterRule secondRule = ParameterFilterRuleFactory.CreateEqualsRule(demoPhase.Id, filterValue);
@@ -239,6 +262,8 @@ namespace AXZ.Commands
                 return viewFilter;
             }
             List<Category> cats = CollectPhaseParameters.GetPhaseParameterCategories(document);
+            //List<Category> cats = CollectPhaseParameters.GetFilterableCategoriesForParameter(startPhase);
+
             List<ElementId> allowedCategoryIds = cats.Select(cat => cat.Id).ToList();
 
             FilterRule firstRule = ParameterFilterRuleFactory.CreateEqualsRule(startPhase.Id, filterValue);
@@ -264,10 +289,11 @@ namespace AXZ.Commands
                 .Cast<ParameterFilterElement>()
                 .FirstOrDefault(f => f.Name == filterName);
             if (viewFilter != null)
-            {
-                return viewFilter;
+            {                return viewFilter;
             }
             List<Category> cats = CollectPhaseParameters.GetPhaseParameterCategories(document);
+            //List<Category> startCats = CollectPhaseParameters.GetFilterableCategoriesForParameter(startPhase);
+
             List<ElementId> allowedCategoryIds = cats.Select(cat => cat.Id).ToList();
             FilterRule hasValueRule = ParameterFilterRuleFactory.CreateNotEqualsRule(startPhase.Id, "");
             ElementParameterFilter hasValueFilter = new ElementParameterFilter(hasValueRule);
@@ -329,7 +355,6 @@ namespace AXZ.Commands
             );
             return viewFilter;
         }
-
         public static List<Category> GetFilterableCategories(Document document, List<ElementId> parameters, List<CategoryType> types = null)
         {
             List<Category> filterableCategories = new List<Category>();
@@ -349,6 +374,20 @@ namespace AXZ.Commands
                 }
             }
             return filterableCategories;
+        }
+
+        public static List<ElementId> GetAlreadyAppliedFilters(Autodesk.Revit.DB.View view)
+        {
+            List<ElementId> result = new List<ElementId>();
+            foreach (ElementId id in view.GetFilters())
+            {
+                Element filter = view.Document.GetElement(id);
+                if (filter.Name.StartsWith("SP_ViewPhase"))
+                {
+                    result.Add(id);
+                }
+            }
+            return result;
         }
     }
 }
