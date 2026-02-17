@@ -21,12 +21,13 @@ namespace AXZ.UI
         public bool Cancelled { get; set; }
         public string Phase { get; private set; }
         public string SelectedPhaseLevel { get; private set; }
-        public PhaseFilter SelectedPhaseFilter { get; private set; }
+        public PhaseFilterOverride SelectedPhaseFilter { get; private set; }
         public bool AddToView { get; private set; }
-        private Dictionary<string, PhaseFilter> PhaseFilters { get; set; }
+        private Dictionary<string, PhaseFilterOverride> PhaseFilters = new Dictionary<string, PhaseFilterOverride>();
         public ViewPhaseWindow(string windowTitle,
             Document document,
-            Window owner)
+            Window owner,
+            List<PhaseFilterOverride> filters)
         {
             InitializeComponent();
             this.Phase = document.ActiveView.LookupParameter("SP_ViewPhase").AsString();
@@ -36,18 +37,21 @@ namespace AXZ.UI
             this.PhaseTextBox.Text = this.Phase;
             Cancelled = true;
             PhaseLevelListbox.Items.Add("Phase 1");
+            PhaseLevelListbox.SelectedItem = "Phase 1";
             PhaseLevelListbox.Items.Add("Phase 2");
             PhaseLevelListbox.Items.Add("Phase 3");
             PhaseLevelListbox.Items.Add("Phase Combined");
-
-            PhaseFilters = new Dictionary<string, PhaseFilter>();
-            foreach(PhaseFilter pf in new FilteredElementCollector(document)
-                .OfClass(typeof(PhaseFilter))
-                .Cast<PhaseFilter>())
+            foreach (PhaseFilterOverride filter in filters)
             {
-                this.PhaseFilterList.Items.Add(pf.Name);  
-                PhaseFilters.Add(pf.Name, pf);
+                ComboBoxItem comboBoxItem = new ComboBoxItem()
+                {
+                    Content = filter.Name,
+                    ToolTip = filter.Description,
+                    Tag = filter
+                };
+                this.PhaseFilterList.Items.Add(comboBoxItem);
             }
+            PhaseFilterList.SelectedIndex = 0;
 
         }
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
@@ -62,17 +66,15 @@ namespace AXZ.UI
             this.AddToView = this.AddToViewCheckbox.IsChecked.Value;
             if(this.PhaseFilterList.SelectedItem != null)
             {
-                string selectedPhaseFilterName = this.PhaseFilterList.SelectedItem.ToString();
-                if (selectedPhaseFilterName != null | selectedPhaseFilterName != "")
-                {
-                    this.SelectedPhaseFilter = PhaseFilters[selectedPhaseFilterName];
-                }
-                else
-                {
-                    this.SelectedPhaseFilter = null;
-                };
+                ComboBoxItem selectedItem = (ComboBoxItem)this.PhaseFilterList.SelectedItem;
+
+                this.SelectedPhaseFilter = selectedItem.Tag as PhaseFilterOverride;
             }
-            
+            else
+            {
+                this.SelectedPhaseFilter = null;
+            };
+
             this.Close();
         }
     }

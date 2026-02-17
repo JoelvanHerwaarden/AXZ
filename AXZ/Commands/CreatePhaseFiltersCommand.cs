@@ -27,7 +27,7 @@ namespace AXZ.Commands
             CollectPhaseParameters.RepairPhasingParameterBindings(document);
             Selection selection = uIDocument.Selection;
             Parameter viewPhaseParameter = document.ActiveView.LookupParameter("SP_ViewPhase");
-            if(viewPhaseParameter == null)
+            if (viewPhaseParameter == null)
             {
                 Utils.Show("The active view does not have the 'SP_ViewPhase' parameter.");
                 return Result.Failed;
@@ -39,8 +39,13 @@ namespace AXZ.Commands
                 return Result.Failed;
             }
             string phase = viewPhaseParameter.AsString();
-
-            ViewPhaseWindow window = new ViewPhaseWindow("Create Phase Filters", document, Utils.RevitWindow(commandData));
+            List<PhaseFilterOverride> filters = new List<PhaseFilterOverride>()
+            {
+                PhaseFilterOverride.RGB(document),
+                PhaseFilterOverride.RGBSolid(document),
+                PhaseFilterOverride.ShowCurrent(document)
+            };
+            ViewPhaseWindow window = new ViewPhaseWindow("Create Phase Filters", document, Utils.RevitWindow(commandData), filters);
             window.ShowDialog();
             if(window.Cancelled)
             {
@@ -98,7 +103,7 @@ namespace AXZ.Commands
                 Debug.Log($"Retrieved demolish phase parameter: {demoPhase.Name}"); 
                 ParameterFilterElement filterElementNew = FilterUtils.CreateNewFilter(startPhase, phase, newFilterName);
                 Debug.Log("New filter created successfully.");
-                ParameterFilterElement filterElementDemo = FilterUtils.CreateDemolishedFilter(demoPhase, phase, demoFilterName);
+                ParameterFilterElement filterElementDemo = FilterUtils.CreateDemolishedFilter(startPhase, demoPhase, phase, demoFilterName);
                 Debug.Log("Demolished filter created successfully.");
                 ParameterFilterElement filterElementTempInPhase = FilterUtils.CreateTempInPhaseFilter(startPhase, demoPhase, phase, tempInPhaseFilterName);
                 Debug.Log("Temporary In Phase filter created successfully.");
@@ -126,52 +131,23 @@ namespace AXZ.Commands
                         activeView.RemoveFilter(id);
                     }
 
-                    ElementId solidFillPattern = new FilteredElementCollector(document)
-                        .OfClass(typeof(FillPatternElement))
-                        .Where(FillPatternElement => FillPatternElement.Name.Equals("<Solid fill>"))
-                        .Cast<FillPatternElement>()
-                        .First()
-                        .Id;
+                    PhaseFilterOverride phaseFilter = window.SelectedPhaseFilter;
 
-                    DB.Color New = new DB.Color(0, 255, 0);
-                    DB.Color Demo = new DB.Color(255, 0, 0);
-                    DB.Color TempInPhase = new DB.Color(0, 0, 255);
-                    DB.Color TempOverall = new DB.Color(0, 255, 255);
-
-
-                    OverrideGraphicSettings graphicsTempInPhase = new OverrideGraphicSettings();
-                    graphicsTempInPhase.SetCutForegroundPatternColor(TempInPhase);
-                    graphicsTempInPhase.SetSurfaceForegroundPatternColor(TempInPhase);
-                    graphicsTempInPhase.SetCutForegroundPatternId(solidFillPattern);
-                    graphicsTempInPhase.SetSurfaceForegroundPatternId(solidFillPattern);
                     activeView.AddFilter(filterElementTempInPhase.Id);
-                    activeView.SetFilterOverrides(filterElementTempInPhase.Id, graphicsTempInPhase);
-                    
-                    OverrideGraphicSettings graphicsNew = new OverrideGraphicSettings();
-                    graphicsNew.SetCutForegroundPatternColor(New);
-                    graphicsNew.SetSurfaceForegroundPatternColor(New);
-                    graphicsNew.SetCutForegroundPatternId(solidFillPattern);
-                    graphicsNew.SetSurfaceForegroundPatternId(solidFillPattern);
+                    activeView.SetFilterOverrides(filterElementTempInPhase.Id, phaseFilter.OGSTempCurrentPhase);
+                    activeView.SetFilterVisibility(filterElementTempInPhase.Id, phaseFilter.TempinPhaseVisible);
+
                     activeView.AddFilter(filterElementNew.Id);
-                    activeView.SetFilterOverrides(filterElementNew.Id, graphicsNew);
+                    activeView.SetFilterOverrides(filterElementNew.Id, phaseFilter.OGSNew);
+                    activeView.SetFilterVisibility(filterElementNew.Id, phaseFilter.NewVisible);
 
-                    OverrideGraphicSettings graphicsDemo = new OverrideGraphicSettings();
-                    graphicsDemo.SetCutForegroundPatternColor(Demo);
-                    graphicsDemo.SetSurfaceForegroundPatternColor(Demo);
-                    graphicsDemo.SetCutForegroundPatternId(solidFillPattern);
-                    graphicsDemo.SetSurfaceForegroundPatternId(solidFillPattern);
                     activeView.AddFilter(filterElementDemo.Id);
-                    activeView.SetFilterOverrides(filterElementDemo.Id, graphicsDemo);
+                    activeView.SetFilterOverrides(filterElementDemo.Id, phaseFilter.OGSDemo);
+                    activeView.SetFilterVisibility(filterElementDemo.Id, phaseFilter.DemoVisible);
 
-
-
-                    OverrideGraphicSettings graphicsTemp = new OverrideGraphicSettings();
-                    graphicsTemp.SetCutForegroundPatternColor(TempOverall);
-                    graphicsTemp.SetSurfaceForegroundPatternColor(TempOverall);
-                    graphicsTemp.SetCutForegroundPatternId(solidFillPattern);
-                    graphicsTemp.SetSurfaceForegroundPatternId(solidFillPattern);
                     activeView.AddFilter(filterElementTemp.Id);
-                    activeView.SetFilterOverrides(filterElementTemp.Id, graphicsTemp);
+                    activeView.SetFilterOverrides(filterElementTemp.Id, phaseFilter.OGSTemp);
+                    activeView.SetFilterVisibility(filterElementTemp.Id, phaseFilter.TempVisible);
 
                     activeView.AddFilter(filterElementNotVis.Id);
                     activeView.SetFilterVisibility(filterElementNotVis.Id, false);
@@ -218,7 +194,7 @@ namespace AXZ.Commands
             );
             return viewFilter;
         }
-        public static ParameterFilterElement CreateDemolishedFilter(SharedParameterElement demoPhase, string filterValue, string filterName)
+        public static ParameterFilterElement CreateDemolishedFilter(SharedParameterElement startPhase, SharedParameterElement demoPhase, string filterValue, string filterName)
         {
             Document document = demoPhase.Document;
             ParameterFilterElement viewFilter = new FilteredElementCollector(document)
@@ -236,6 +212,7 @@ namespace AXZ.Commands
             List<ElementId> allowedCategoryIds = cats.Select(cat => cat.Id).ToList();
             FilterRule hasValueRule = ParameterFilterRuleFactory.CreateNotEqualsRule(demoPhase.Id, "");
             FilterRule secondRule = ParameterFilterRuleFactory.CreateEqualsRule(demoPhase.Id, filterValue);
+            FilterRule thirdRule = ParameterFilterRuleFactory.CreateNotEqualsRule(startPhase.Id, filterValue);
 
             LogicalAndFilter filter = new LogicalAndFilter(new List<ElementFilter>
             {

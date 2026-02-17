@@ -6,11 +6,11 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
     xmlns:local="clr-namespace:AXZ.UI"
     mc:Ignorable="d"
-    MinWidth="500"
+    MinWidth="600"
     Height="430"
     MinHeight="535"
     MaxHeight="535"
-    Width="500"
+    Width="600"
     WindowStartupLocation="CenterOwner"
     Title=""
     Background="{DynamicResource MainBackground}">
@@ -99,12 +99,12 @@
             VerticalContentAlignment="Center"
             Margin="10,10,10,0" 
             Grid.Row="6"
-               Visibility="Hidden"
+               Visibility="Visible"
             Foreground="{DynamicResource FontColor}" />
 
         <Border Style="{DynamicResource BackgroundBorder}" 
                 
-               Visibility="Hidden"
+               Visibility="Visible"
             Grid.Row="7"
             Margin="10,10,10,10">
             <ComboBox 
@@ -114,7 +114,10 @@
                 BorderThickness="0"
                 FontSize="16"
                 Foreground="{DynamicResource FontColor}"
-                Margin="15,5,15,5"/>
+                Margin="15,5,15,5">
+
+            </ComboBox>
+
         </Border>
             <Button x:Name="SubmitButton" 
                 HorizontalAlignment="Right"

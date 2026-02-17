@@ -18,6 +18,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Commands\CreateSharedParametersCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Debug.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GlobalAssemblyInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PhaseFilterOverride.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Resources.Designer.cs">
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
