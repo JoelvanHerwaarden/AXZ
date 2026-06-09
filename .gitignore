@@ -1,0 +1,48 @@
+## Visual Studio / .NET
+*.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.rsuser
+/AXZ/.vs
+
+## Build outputs
+bin/
+obj/
+out/
+
+## NuGet
+packages/
+*.nupkg
+project.lock.json
+project.assets.json
+
+## Installer build artifacts (keep scripts, ignore outputs)
+Installer/_UserInput.ThingsToInstall/
+Installer/*.zip
+!Installer/_install.bat
+!Installer/_Information.txt
+!Installer/_InstallationConfiguration.txt
+
+## Revit addin deployment (local machine paths)
+*.addin
+
+## dotnet local tools / SDK sentinels
+.dotnet/
+
+## OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+## Logs / user data (written at runtime under %AppData%)
+*.log
+
+## JetBrains Rider
+.idea/
+*.sln.iml
+
+##CLAUDE FILES
+CLAUDE.md
+/AXZ2025/obj
