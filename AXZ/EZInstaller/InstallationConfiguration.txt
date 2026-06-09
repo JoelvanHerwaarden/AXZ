@@ -1,0 +1,9 @@
+﻿PhaseAssignPhaseCodes.bmp => C:\ProgramData\Autodesk\Revit\Addins\2025\AXZ\Resources\PhaseAssignPhaseCodes.bmp
+PhaseCreateFilters.bmp => C:\ProgramData\Autodesk\Revit\Addins\2025\AXZ\Resources\PhaseCreateFilters.bmp
+PhaseCreateParameters.bmp => C:\ProgramData\Autodesk\Revit\Addins\2025\AXZ\Resources\PhaseCreateParameters.bmp
+PhasePurgeFilters.bmp => C:\ProgramData\Autodesk\Revit\Addins\2025\AXZ\Resources\PhasePurgeFilters.bmp
+
+
+AXZ2025.dll => C:\ProgramData\Autodesk\Revit\Addins\2025\AXZ\AXZ.dll
+
+AXZ.addin => C:\ProgramData\Autodesk\Revit\Addins\2025\AXZ.addin
